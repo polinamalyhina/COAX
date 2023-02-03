@@ -1,0 +1,15 @@
+{% extends 'main/main.html' %}
+
+{% block title %}Create an order{% endblock %}
+
+{% block content %}
+    <div class="formform">
+        <h3>Create an order</h3>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_ul }}
+            <input type="submit">
+            <span>{{ error }}</span>
+        </form>
+    </div>
+{% endblock %}
